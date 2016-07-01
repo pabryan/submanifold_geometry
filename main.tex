@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage{amsmath}
 
 \title{Submanifold Geometry}
 \author{Paul Bryan}
@@ -26,9 +27,13 @@ by the Gauss equation: $\bar{\nabla}_X Y = \pi^{TM} \hat{\nabla}_X Y$. We may th
 \]
 with respect to the splitting $F^{\ast}TN = TM \oplus \nu M$. Observer that $\bar{h}$ is symmetric,
 \[
-\bar{h} (X, Y) - \bar{h} (Y, X) = \hat{\nabla}_X Y - \bar{\nabla}_X Y - \hat{\nabla}_Y X + \bar{\nabla}_Y X = \hat{\nabla}_X Y - \hat{\nabla}_Y X + \bar{\nabla}_Y X - \bar{\nabla}_X Y = [X, Y] + [Y, X] = 0
+\begin{split}
+\bar{h} (X, Y) - \bar{h} (Y, X) &= \hat{\nabla}_X Y - \bar{\nabla}_X Y - \hat{\nabla}_Y X + \bar{\nabla}_Y X \\
+&= \hat{\nabla}_X Y - \hat{\nabla}_Y X + \bar{\nabla}_Y X - \bar{\nabla}_X Y \\
+&= [X, Y] + [Y, X] = 0
+\end{split}
 \]
-since both connections $\hat{\nabla}$ and $\bar{\nabla}$ are symmetric, and because $dF [X, Y] = [dF X, dF Y]$ so that under our identification $dF : TM \simeq dF(TM)$, the Lie bracket is compatible with this identification.
+since both connections $\hat{\nabla}$ and $\bar{\nabla}$ are symmetric, and because $dF [X, Y] = [dF X, dF Y]$ so that the Lie bracket is invariant under our identification $dF : TM \simeq dF(TM)$.
 
 Also define, $A \in \Gamma(T^{\ast}M \otimes T^{\ast} M)$,
 \[
