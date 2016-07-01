@@ -104,7 +104,39 @@ Note that since $\hat{W}(X) \in TM$, $g(\hat{W}(X), Y)$ is well defined. Also no
 Thus we find an incompatibility between $h$ and $A$ (or equivalently between $h$ and $\hat{W}$). Note that $A$ and $\hat{W}$ are however related, the one being a metric contraction with respect to $g$ of the other.
 
 Let us introduce new tensors to measure the incompatibility of $g$ and $\hat{g}$ since this is the source of incompatibilities above. Define,
+\begin{align*}
+\alpha(X, Y) &= g(X, Y) - \hat{g}(X, Y) = g(X, Y) - \bar{g}(X, Y), \\
+\beta(X, Y) &= \nabla_X Y - \bar{\nabla}_X Y.
+\end{align*}
+The analogous definitions for $\bar{g}$ -- $\bar{\alpha}$ and $\bar{\beta}$ -- are both zero. It's also worth pointing out that $\beta$ is indeed a tensor, being the difference of two connections, and that both $\alpha$ and $\beta$ are symmetric, the latter because $\nabla$ and $\bar{\nabla}$ are both symmetric connections.
+
+Then we have,
 \[
-\alpha(X, Y) = g(X, Y) - \hat{g}(X, Y) = g(X, Y) - \bar{g}(X, Y), \quad \beta(X, Y) = \nabla_X Y - \bar{\nabla}_X Y.
+g(X, Y) = \alpha(X, Y) + \hat{g} (X, Y)
 \]
-The analogous definitions for $\bar{g}$ - $\bar{\alpha}$ and $\bar{\beta}$ - are both zero.
+and
+\[
+\bar{\nabla}_X Y + \bar{h}(X, Y) = \hat{\nabla}_X Y = \nabla_X Y + h(X, Y) = \bar{\nabla}_X Y + \beta(X, Y) + h(X, Y).
+\]
+Thus we also obtain,
+\[
+\beta(X, Y) = \bar{h} (X, Y) - h(X, Y).
+\]
+and hence
+\[
+\bar{A}(X, Y) = \hat{g}(\bar{h}(X, Y), \nu) = \hat{g}(\beta(X, Y), \nu) + \hat{g}(h(X, Y), \nu).
+\]
+On the other hand
+\[
+\bar{A}(X, Y) = \bar{g}(\hat{W}(X), Y) = g(\hat{W}(X), Y) - \alpha(\hat{W}(X), Y) = A(X, Y) - \alpha(\hat{W}(X), Y).
+\]
+Thus we find the relation between $A$, $h$, and $\hat{W}$,
+\[
+A(X, Y) = \hat{g}(h(X, Y), \nu) + \hat{g}(\beta(X, Y), \nu) + \alpha(\hat{W}(X), Y).
+\]
+Note that for $\bar{g}$, $\bar{\alpha} = \bar{\beta} = 0$ is precisely the statement that $\bar{A}(X, Y) = \hat{g}(h(X, Y), \nu)$ from which we deduced that $\hat{W}$ is self-adjoint with respect to $\bar{g}$.
+
+In fact, since $h$ and $\beta$ are symmetric, the lack of symmetry of $A$ is recorded in the fact that $W$ is not self-adjoint with respect to $\alpha$. From the definition of $\alpha$, this is again just the fact that $\hat{W}$ is not self-adjoint with respect to $g$:
+\[
+A(X, Y) = \hat{g}(h(X, Y), \nu) + \hat{g}(\beta(X, Y), \nu) - \bar{A}(X, Y) + g(\hat{W}(X), Y).
+\]
