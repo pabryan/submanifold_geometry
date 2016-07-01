@@ -42,18 +42,20 @@ and $\bar{A}$ is symmetric: $\bar{A}(X, Y) = \bar{A}(Y, X)$.
 
 Define the Weingarten map with respect to $\nu$, $W \in \Gamma(T^{\ast}M \otimes \nu M)$ by
 \[
-W(X) = - \hat{\nabla}_X \nu.
+\hat{W}(X) = - \hat{\nabla}_X \nu.
 \]
 
 Since $\hat{g}(Y, \nu) = 0$ for any tangent field, we have
 \[
-0 = \hat{\nabla}_X \hat{g} (Y, \nu) = \hat{g}(\hat{\nabla}_X Y, \nu) + \hat{g} (Y, \hat{\nabla}_X \nu) = \bar{A}(X, Y) - \hat{g}(Y, W(X)).
+0 = \hat{\nabla}_X \hat{g} (Y, \nu) = \hat{g}(\hat{\nabla}_X Y, \nu) + \hat{g} (Y, \hat{\nabla}_X \nu) = \bar{A}(X, Y) - \hat{g}(Y, \hat{W}(X)).
 \]
 Thus we find that,
 \[
-\bar{g} (W(X), Y) = \hat{g} (W(X), Y) = A(X, Y) = A(Y, X) = \hat{g}(X, W(Y)) = \bar{g}(X, W(Y)),
+\bar{g} (\hat{W}(X), Y) = \hat{g} (\hat{W}(X), Y) = A(X, Y) = A(Y, X) = \hat{g}(\hat{W}(Y)) = \bar{g}(X, \hat{W}(Y)),
 \]
-and so $W$ is self adjoint with respect to $\bar{g}$. Observe that we do not furnish $W$ with a bar since it's definition is independent of the metric $\bar{g}$. However, as we have just seen, since $F$ is isometric, $W$ is self-adjoint with respect to $\bar{g}$ through it's relation to the second fundamental form.
+and so $W$ is self adjoint with respect to $\bar{g}$.
+
+Observe that we furnished the Wiengarten map with a caret ($\hat{W}$) rather than with a bar since it's definition is independent of the metric $\bar{g}$. However, as we have just seen, since $F$ is isometric, $W$ is self-adjoint with respect to $\bar{g}$ through it's relation to the second fundamental form. 
 
 \section{Non Isometric Submanifold Geometry}
 \end{document}
