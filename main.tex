@@ -16,11 +16,17 @@ F^{\ast}TN \simeq TM \oplus \nu M.
 \]
 Here we abuse notation, but writing $TM$ for $F_{\ast} TM$ since if $F$ is an immersion, $F_{\ast} : TM \to F^{\ast} TN$ is an injective bundle map and hence isomorphic with it's image. Let $\nu \in \Gamma(F^{\ast}TN)$ be a smooth, unit normal vector field along $M$, i.e. $\hat{g}(\nu, \nu) \equiv 1$ and for any $X \in TM$, $\hat{g}(X, \nu) = 0$.
 
-Let $X, Y \in \Gamma(TM) \subset \Gamma(F^{\ast}TN)$, and define the second fundamental form, $h \in \Gamma(T^{\ast} M \otimes T^{\ast} M \otimes \nu M)$,
+Let $X, Y \in \Gamma(TM) \subset \Gamma(F^{\ast}TN)$, and define the second fundamental form, $\bar{h} \in \Gamma(T^{\ast} M \otimes T^{\ast} M \otimes \nu M)$,
 \[
-\bar{h}(X, Y) = \hat{\nabla}_X Y - \bar{\nabla}_X Y.
+\bar{h}(X, Y) = \pi^{\nu M} \hat{\nabla}_X Y = \hat{\nabla}_X Y - \pi^{TM} \hat{\nabla}_X Y = \hat{\nabla}_X Y - \bar{\nabla}_X Y,
 \]
-Here I implicitly use the Gauss equation: $\bar{\nabla}_X Y = \pi^{TM} \hat{\nabla}_X Y$ and so $h$ is indeed normal valued. Also define, $A \in \Gamma(T^{\ast}M \otimes T^{\ast} M)$,
+by the Gauss equation: $\bar{\nabla}_X Y = \pi^{TM} \hat{\nabla}_X Y$. We may thus write
+\[
+\hat{\nabla}_X Y = \bar{\nabla}_X Y + h(X, Y),
+\]
+with respect to the splitting $F^{\ast}TN = TM \oplus \nu M$.
+
+Also define, $A \in \Gamma(T^{\ast}M \otimes T^{\ast} M)$,
 \[
 \bar{A}(X, Y) = \hat{g}(\bar{h}(X, Y), \nu) = \bar{g} (\hat{\nabla}_X Y, \nu),
 \]
@@ -28,20 +34,20 @@ the second fundamental form with respect to $\nu$, so that,
 \[
 \bar{h}(X, Y) = \bar{A}(X, Y) \nu.
 \]
-Define the Weingarten map with respect to $\nu$, $\bar{W} \in \Gamma(T^{\ast}M \otimes \nu M)$ by
+Define the Weingarten map with respect to $\nu$, $W \in \Gamma(T^{\ast}M \otimes \nu M)$ by
 \[
-\bar{W}(X) = - \hat{\nabla}_X \nu.
+W(X) = - \hat{\nabla}_X \nu.
 \]
 
 Since $\hat{g}(Y, \nu) = 0$ for any tangent field, we have
 \[
-0 = \hat{\nabla}_X \hat{g} (Y, \nu) = \hat{g}(\hat{\nabla}_X Y, \nu) + \hat{g} (Y, \hat{\nabla}_X \nu) = \bar{A}(X, Y) - \hat{g}(Y, \bar{W}(X)).
+0 = \hat{\nabla}_X \hat{g} (Y, \nu) = \hat{g}(\hat{\nabla}_X Y, \nu) + \hat{g} (Y, \hat{\nabla}_X \nu) = \bar{A}(X, Y) - \hat{g}(Y, W(X)).
 \]
 Thus we find that,
 \[
-\bar{g} (\bar{W}(X), Y) = \hat{g} (\bar{W}(X), Y) = A(X, Y) = A(Y, X) = \hat{g}(X, \bar{W}(Y)) = \bar{g}(X, \bar{W}(Y)),
+\bar{g} (W(X), Y) = \hat{g} (W(X), Y) = A(X, Y) = A(Y, X) = \hat{g}(X, W(Y)) = \bar{g}(X, W(Y)),
 \]
-and so $\bar{W}$ is self adjoint with respect to $\bar{g}$.
+and so $W$ is self adjoint with respect to $\bar{g}$. Observe that we do not furnish $W$ with a bar since it's definition is independent of the metric $\bar{g}$. However, as we have just seen, since $F$ is isometric, $W$ is self-adjoint with respect to $\bar{g}$ through it's relation to the second fundamental form.
 
 \section{Non Isometric Submanifold Geometry}
 \end{document}
