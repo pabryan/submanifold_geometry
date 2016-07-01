@@ -1,15 +1,34 @@
-\documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath}
+#+TITLE: Submanifold Geometry
+#+AUTHOR: Paul Bryan
+#+SETUPFILE: ~/.emacs.d/org-templates/bibliography.org
 
-\title{Submanifold Geometry}
-\author{Paul Bryan}
+# ***  Class
+#+LATEX_CLASS: amsart
 
-\begin{document}
+# *** Macros
+#+LATEX_HEADER: \DeclareMathOperator{\tangspeed}{v}
+#+LATEX_HEADER: \DeclareMathOperator{\norfactor}{\lambda}
+#+LATEX_HEADER: \DeclareMathOperator{\ineq_rel}{\simeq}
+#+LATEX_HEADER: \DeclareMathOperator{\chordarcprofile}{\mathcal{Z}}
+#+LATEX_HEADER: \newcommand\holder{H\"older}
+#+LATEX_HEADER: \DeclareMathOperator{\network}{\mathcal{N}}
+#+LATEX_HEADER: \DeclareMathOperator{\corneranglespeed}{{\Delta v}}
 
-\maketitle
+# *** For bundling
+#+LATEX_HEADER: \usepackage{snapshot}
 
-\section{Isometric Sub-manifold Geometry}
+# *** Author
+#+LATEX_HEADER: \address{Department of Mathematics, Warwick University}
+#+LATEX_HEADER: \email{pabryan@gmail.com}
+
+# *** Metadata
+#+LaTeX_HEADER: \keywords{}
+#+LATEX_HEADER: \subjclass[2010]{}
+
+# *** Other formatting settings
+#+LATEX_HEADER: \date{}
+
+* Isometric Sub-manifold Geometry
 
 Let $F: (M, \bar{g}) \to (N, \hat{g})$ be an isometric immersion. Let $\bar{\nabla}$ and $\hat{\nabla}$ denote the respective Levi-Civita connections. On the pull-back bundle $F^{\ast} TN$, we have an induced metric $\hat{g}$ and metric-compatible connection $\hat{\nabla}$. The metric $\hat{g}$ splits the  pull-back bundle into orthogonal subspaces,
 \[
@@ -26,6 +45,7 @@ by the Gauss equation: $\bar{\nabla}_X Y = \pi^{TM} \hat{\nabla}_X Y$. We may th
 \hat{\nabla}_X Y = \bar{\nabla}_X Y + h(X, Y),
 \]
 with respect to the splitting $F^{\ast}TN = TM \oplus \nu M$. Observer that $\bar{h}$ is symmetric,
+#+BEGIN_latex
 \[
 \begin{split}
 \bar{h} (X, Y) - \bar{h} (Y, X) &= \hat{\nabla}_X Y - \bar{\nabla}_X Y - \hat{\nabla}_Y X + \bar{\nabla}_Y X \\
@@ -33,6 +53,7 @@ with respect to the splitting $F^{\ast}TN = TM \oplus \nu M$. Observer that $\ba
 &= [X, Y] + [Y, X] = 0
 \end{split}
 \]
+#+END_latex
 since both connections $\hat{\nabla}$ and $\bar{\nabla}$ are symmetric, and because $dF [X, Y] = [dF X, dF Y]$ so that the Lie bracket is invariant under our identification $dF : TM \simeq dF(TM)$.
 
 Also define, $A \in \Gamma(T^{\ast}M \otimes T^{\ast} M)$,
@@ -62,7 +83,8 @@ and so $W$ is self adjoint with respect to $\bar{g}$.
 
 Observe that we furnished the Wiengarten map with a caret ($\hat{W}$) rather than with a bar since it's definition is independent of the metric $\bar{g}$. However, as we have just seen, since $F$ is isometric, $W$ is self-adjoint with respect to $\bar{g}$ through it's relation to the second fundamental form. 
 
-\section{Non Isometric Submanifold Geometry}
+
+* Non Isometric Submanifold Geometry
 
 We retain all the notation of the previous section. Now let $g$ be a metric on $M$; in general $g \ne \bar{g}$. Let $\nabla$ be the Levi-Civita connection with respect to $g$. Define, $h \in \Gamma(T^{\ast} M \otimes T^{\ast}M \otimes F^{\ast}TN$,
 \[
@@ -86,4 +108,3 @@ Let us introduce new tensors to measure the incompatibility of $g$ and $\hat{g}$
 \]
 The analogous definition for $\bar{g}$, $\bar{\beta}(X, Y) = \bar{g}(X, Y) - \hat{g}(X, Y) = 0$.
 
-\end{document}
