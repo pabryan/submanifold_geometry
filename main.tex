@@ -63,4 +63,27 @@ and so $W$ is self adjoint with respect to $\bar{g}$.
 Observe that we furnished the Wiengarten map with a caret ($\hat{W}$) rather than with a bar since it's definition is independent of the metric $\bar{g}$. However, as we have just seen, since $F$ is isometric, $W$ is self-adjoint with respect to $\bar{g}$ through it's relation to the second fundamental form. 
 
 \section{Non Isometric Submanifold Geometry}
+
+We retain all the notation of the previous section. Now let $g$ be a metric on $M$; in general $g \ne \bar{g}$. Let $\nabla$ be the Levi-Civita connection with respect to $g$. Define, $h \in \Gamma(T^{\ast} M \otimes T^{\ast}M \otimes F^{\ast}TN$,
+\[
+h(X, Y) = \hat{\nabla}_X Y - \nabla_X Y.
+\]
+As in the previous section, we may write
+\[
+\hat{\nabla}_X Y = \nabla_X Y + h (X, Y),
+\]
+but this is no longer with respect to the splitting $F^{\ast}TN = TM \oplus \nu M$ since $\nabla_X Y \ne \pi^{TM} \hat{\nabla}_X Y$ in general. It is still true however, that $h$ is symmetric since $\hat{\nabla}$ and $\nabla$ are symmetric.
+
+Now it is not so clear how we should define $A$: since $h$ will not be necessarily be normal bundle valued, it doesn't make a lot of sense to define $A(X, Y) = \hat{g}(h(X, Y), \nu)$. Instead, we work with $\hat{W}$. Define $A \in T^{\ast}M \otimes T^{\ast}M)$,
+\[
+A (X, Y) = g(\hat{W}(X), Y) = - g(\hat{\nabla}_X \nu, Y).
+\]
+Note that $A(X, Y) \ne \hat{g} (X, Y)$ since $g \ne \bar{g}$ and so we cannot use metric compatibility of $\hat{\nabla}$ with $\hat{g}$ to conclude that $\hat{W}$ is self-adjoint with respect to $g$. Thus we find an incompatibility between $h$ and $A$ (or equivalently between $h$ and $\hat{W}$). Note that $A$ and $\hat{W}$ are however related, the one being a metric contraction with respect to $g$ of the other.
+
+Let us introduce new tensors to measure the incompatibility of $g$ and $\hat{g}$ since this is the source of incompatibilities above. Define,
+\[
+\beta(X, Y) = g(X, Y) - \hat{g}(X, Y).
+\]
+The analogous definition for $\bar{g}$, $\bar{\beta}(X, Y) = \bar{g}(X, Y) - \hat{g}(X, Y) = 0$.
+
 \end{document}
